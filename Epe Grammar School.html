@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Epe Senior Grammar School</title>
+    <link rel="stylesheet" href="/css/Epe Grammar School.css">
+  </head>
+  <body>
+    <header>
+      <h1>EPE SENIOR GRAMMAR SCHOOL</h1>
+      <p>Building the Future Leaders</p>
+    </header>
+    <section class="hero">
+      <h1>Welcome to Epe Senior Grammar School</h1>
+      <p>Providing quality education and boarding experience</p>
+      <button id="applyBtn">Apply Now</button>
+    </section>
+    <section class="boarding">
+      <h2>Boarding Life</h2>
+      <p>
+        Our boarding house provide a safe,comfortable, and enriching environment
+        for student. With experience house masters and engaging activities, we
+        nuture both academic and personal growth
+      </p>
+    </section>
+    <section id="admission" class="form-section">
+      <h2>Student Admission Form</h2>
+      <form id="admissionForm">
+        <label>Full Name</label>
+        <input type="text" required />
+        <label>Age</label>
+        <input type="number" required />
+        <label>Gender</label>
+        <select required>
+          <option value="">Select</option>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+        <label>Class Applying For:</label>
+        <input type="text" required />
+        <label>Parent's Name:</label>
+        <input type="text" required />
+        <label>Parent"s Phone:</label>
+        <input type="tel" required />
+        <label>Address</label>
+        <textarea rows="3" required></textarea>
+        <button type="submit">Submit Application</button>
+        <div id="successMessage" class="successMessage">
+          <span class="checkmark"></span>Application submitted successfully!
+        </div>
+      </form>
+    </section>
+    <footer>
+      <p>@ 2025 Epe Senior Grammar School.All Rights Reserved.</p>
+    </footer>
+    <script>
+      document.getElementById('applyBtn')
+      .addEventListener('click',()=>{
+          document.getElementById('admission')
+          .scrollIntoView({behavior:'smooth'});
+      });
+      document.getElementById('admissionForm').addEventListener('submit,function(e)'
+          {
+              e. preventDefault() ;
+              const msg =
+              document.getElementById('sucessMessage') ;
+              msg.style.displsy = 'block';
+              msg.style.opacity = '1' ;
+              setTimeout(() => {
+                  msg.style.display = 'none' ;
+              } , 500);
+          }, 3000 this. reset
+      );
+    </script>
+  </body>
+</html>
